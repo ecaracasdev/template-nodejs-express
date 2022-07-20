@@ -34,7 +34,7 @@ const createExcelFile = () => {
         })
         rowIndex++
     })
-    wb.write('./src/elias.xlsx')
+    wb.write(`${__dirname}/elias.xlsx`)
 }
 
 
@@ -57,7 +57,6 @@ router.get('/download', (req, res) => {
         res.download(file)
     }, 2000);
 })
-
 
 app.use('/',router)
 
